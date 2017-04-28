@@ -1,21 +1,10 @@
 package com.chinasoft.model.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import org.hibernate.annotations.GenericGenerator;
-
 /**
  * TrainApply entity. @author MyEclipse Persistence Tools
  */
-@Entity
-@Table(name = "trainApply", schema = "dbo", catalog = "HRM")
-public class TrainApply implements java.io.Serializable {
+public class TrainApply implements java.io.Serializable
+{
 
 	// Fields
 
@@ -28,12 +17,13 @@ public class TrainApply implements java.io.Serializable {
 	// Constructors
 
 	/** default constructor */
-	public TrainApply() {
+	public TrainApply()
+	{
 	}
 
 	/** full constructor */
-	public TrainApply(Employee employee, String trainDirect,
-			String trainLeader, Integer trainMark) {
+	public TrainApply(Employee employee, String trainDirect, String trainLeader, Integer trainMark)
+	{
 		this.employee = employee;
 		this.trainDirect = trainDirect;
 		this.trainLeader = trainLeader;
@@ -41,52 +31,53 @@ public class TrainApply implements java.io.Serializable {
 	}
 
 	// Property accessors
-	@GenericGenerator(name = "generator", strategy = "guid")
-	@Id
-	@GeneratedValue(generator = "generator")
-	@Column(name = "trainApplyId", unique = true, nullable = false, length = 36)
-	public String getTrainApplyId() {
+	public String getTrainApplyId()
+	{
 		return this.trainApplyId;
 	}
 
-	public void setTrainApplyId(String trainApplyId) {
+	public void setTrainApplyId(String trainApplyId)
+	{
 		this.trainApplyId = trainApplyId;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "eId", nullable = false)
-	public Employee getEmployee() {
+	public Employee getEmployee()
+	{
 		return this.employee;
 	}
 
-	public void setEmployee(Employee employee) {
+	public void setEmployee(Employee employee)
+	{
 		this.employee = employee;
 	}
 
-	@Column(name = "trainDirect", nullable = false, length = 50)
-	public String getTrainDirect() {
+	public String getTrainDirect()
+	{
 		return this.trainDirect;
 	}
 
-	public void setTrainDirect(String trainDirect) {
+	public void setTrainDirect(String trainDirect)
+	{
 		this.trainDirect = trainDirect;
 	}
 
-	@Column(name = "trainLeader", nullable = false, length = 50)
-	public String getTrainLeader() {
+	public String getTrainLeader()
+	{
 		return this.trainLeader;
 	}
 
-	public void setTrainLeader(String trainLeader) {
+	public void setTrainLeader(String trainLeader)
+	{
 		this.trainLeader = trainLeader;
 	}
 
-	@Column(name = "trainMark", nullable = false)
-	public Integer getTrainMark() {
+	public Integer getTrainMark()
+	{
 		return this.trainMark;
 	}
 
-	public void setTrainMark(Integer trainMark) {
+	public void setTrainMark(Integer trainMark)
+	{
 		this.trainMark = trainMark;
 	}
 

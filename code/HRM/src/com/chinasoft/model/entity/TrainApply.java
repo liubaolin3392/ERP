@@ -9,26 +9,9 @@ public class TrainApply implements java.io.Serializable
 	// Fields
 
 	private String trainApplyId;
-	private Employee employee;
 	private String trainDirect;
 	private String trainLeader;
 	private Integer trainMark;
-
-	// Constructors
-
-	/** default constructor */
-	public TrainApply()
-	{
-	}
-
-	/** full constructor */
-	public TrainApply(Employee employee, String trainDirect, String trainLeader, Integer trainMark)
-	{
-		this.employee = employee;
-		this.trainDirect = trainDirect;
-		this.trainLeader = trainLeader;
-		this.trainMark = trainMark;
-	}
 
 	// Property accessors
 	public String getTrainApplyId()
@@ -39,16 +22,6 @@ public class TrainApply implements java.io.Serializable
 	public void setTrainApplyId(String trainApplyId)
 	{
 		this.trainApplyId = trainApplyId;
-	}
-
-	public Employee getEmployee()
-	{
-		return this.employee;
-	}
-
-	public void setEmployee(Employee employee)
-	{
-		this.employee = employee;
 	}
 
 	public String getTrainDirect()

@@ -11,7 +11,6 @@ public class Attendance implements java.io.Serializable
 	// Fields
 
 	private String aid;
-	private Employee employee;
 	private Integer late;
 	private Integer leaveEarly;
 	private Integer absent;
@@ -19,24 +18,6 @@ public class Attendance implements java.io.Serializable
 	private Timestamp inTime;
 	private Timestamp outTime;
 	// Constructors
-
-	/** default constructor */
-	public Attendance()
-	{
-	}
-
-	/** full constructor */
-	public Attendance(Employee employee, Integer late, Integer leaveEarly, Integer absent, Integer attendance,
-			Timestamp inTime, Timestamp outTime)
-	{
-		this.employee = employee;
-		this.late = late;
-		this.leaveEarly = leaveEarly;
-		this.absent = absent;
-		this.attendance = attendance;
-		this.inTime = inTime;
-		this.outTime = outTime;
-	}
 
 	public String getAid()
 	{
@@ -46,16 +27,6 @@ public class Attendance implements java.io.Serializable
 	public void setAid(String aid)
 	{
 		this.aid = aid;
-	}
-
-	public Employee getEmployee()
-	{
-		return this.employee;
-	}
-
-	public void setEmployee(Employee employee)
-	{
-		this.employee = employee;
 	}
 
 	public Integer getLate()

@@ -2,55 +2,62 @@ package com.chinasoft.model.service.impl;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.chinasoft.model.dao.EmployeeDAO;
+import com.chinasoft.model.dao.EmployeeMapper;
 import com.chinasoft.model.entity.Employee;
 import com.chinasoft.model.service.EmployeeService;
 
 @Service
 @Transactional
-public class EmployeeServiceImpl implements EmployeeService {
+public class EmployeeServiceImpl implements EmployeeService
+{
+	@Autowired
+	private EmployeeMapper employeeMapper;
 
-		@Resource
-		private EmployeeDAO employeeDAO;
-		
 	@Override
-	public boolean addEmployee(Employee employee) {
+	public boolean addEmployee(Employee employee)
+	{
 		// TODO Auto-generated method stub
-		return employeeDAO.save(employee);
+		return employeeMapper.save(employee);
 	}
+
 	@Override
-	public boolean updateEmployee(Employee employee) {
+	public boolean updateEmployee(Employee employee)
+	{
 		// TODO Auto-generated method stub
-		return employeeDAO.attachDirty(employee);
+		return employeeMapper.attachDirty(employee);
 	}
+
 	@Override
-	public Employee getSingleEmployee(String eId) {
+	public Employee getSingleEmployee(String eId)
+	{
 		// TODO Auto-generated method stub
-		return employeeDAO.findById(eId);
+		return employeeMapper.findById(eId);
 	}
-	
-	
-//    获取所有的用户信息
+
+	// 获取所有的用户信息
 	@Override
-	public List<Employee> getAllEmployee() {
+	public List<Employee> getAllEmployee()
+	{
 		// TODO Auto-generated method stub
-		return employeeDAO.findAll();
+		return employeeMapper.findAll();
 	}
+
 	@Override
-	public boolean deleteEmployee(Employee employee) {
+	public boolean deleteEmployee(Employee employee)
+	{
 		// TODO Auto-generated method stub
-		return employeeDAO.delete(employee);
+		return employeeMapper.delete(employee);
 	}
+
 	@Override
-	public List<Employee> serchEmployees(String userName, String department,
-			String position, Integer age, String sex) {
+	public List<Employee> serchEmployees(String userName, String department, String position, Integer age, String sex)
+	{
 		// TODO Auto-generated method stub
-		return employeeDAO.searchEmployees(userName, department, position, age, sex);
+		return employeeMapper.searchEmployees(userName, department, position, age, sex);
 	}
 
 }

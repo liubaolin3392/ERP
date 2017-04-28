@@ -7,31 +7,12 @@ public class Candidate implements java.io.Serializable
 {
 
 	// Fields
-
 	private String candidateId;
 	private String candidateName;
 	private String department;
 	private String position;
 	private String candidateInfo;
 	private Integer candidateMark;
-
-	// Constructors
-
-	/** default constructor */
-	public Candidate()
-	{
-	}
-
-	/** full constructor */
-	public Candidate(String candidateName, String department, String position, String candidateInfo,
-			Integer candidateMark)
-	{
-		this.candidateName = candidateName;
-		this.department = department;
-		this.position = position;
-		this.candidateInfo = candidateInfo;
-		this.candidateMark = candidateMark;
-	}
 
 	public String getCandidateId()
 	{

@@ -18,38 +18,7 @@ public class TrainPlan implements java.io.Serializable
 	private String trainContent;
 	private Timestamp trainStartTime;
 	private String trainContinueTime;
-	private Set<TrainProgram> trainPrograms = new HashSet<TrainProgram>(0);
-
-	// Constructors
-
-	/** default constructor */
-	public TrainPlan()
-	{
-	}
-
-	/** minimal constructor */
-	public TrainPlan(String trainDirect, String trainObject, String trainContent, Timestamp trainStartTime,
-			String trainContinueTime)
-	{
-		this.trainDirect = trainDirect;
-		this.trainObject = trainObject;
-		this.trainContent = trainContent;
-		this.trainStartTime = trainStartTime;
-		this.trainContinueTime = trainContinueTime;
-	}
-
-	/** full constructor */
-	public TrainPlan(String trainDirect, String trainObject, String trainContent, Timestamp trainStartTime,
-			String trainContinueTime, Set<TrainProgram> trainPrograms)
-	{
-		this.trainDirect = trainDirect;
-		this.trainObject = trainObject;
-		this.trainContent = trainContent;
-		this.trainStartTime = trainStartTime;
-		this.trainContinueTime = trainContinueTime;
-		this.trainPrograms = trainPrograms;
-	}
-
+	
 	// Property accessors
 	public String getTrainPlanId()
 	{
@@ -110,15 +79,4 @@ public class TrainPlan implements java.io.Serializable
 	{
 		this.trainContinueTime = trainContinueTime;
 	}
-
-	public Set<TrainProgram> getTrainPrograms()
-	{
-		return this.trainPrograms;
-	}
-
-	public void setTrainPrograms(Set<TrainProgram> trainPrograms)
-	{
-		this.trainPrograms = trainPrograms;
-	}
-
 }

@@ -9,24 +9,11 @@ public class PersonnelChange implements java.io.Serializable
 	// Fields
 
 	private String pcId;
-	private Employee employee;
 	private String changeReason;
 	private Integer doneMark;
 
 	// Constructors
 
-	/** default constructor */
-	public PersonnelChange()
-	{
-	}
-
-	/** full constructor */
-	public PersonnelChange(Employee employee, String changeReason, Integer doneMark)
-	{
-		this.employee = employee;
-		this.changeReason = changeReason;
-		this.doneMark = doneMark;
-	}
 
 	// Property accessors
 	public String getPcId()
@@ -37,16 +24,6 @@ public class PersonnelChange implements java.io.Serializable
 	public void setPcId(String pcId)
 	{
 		this.pcId = pcId;
-	}
-
-	public Employee getEmployee()
-	{
-		return this.employee;
-	}
-
-	public void setEmployee(Employee employee)
-	{
-		this.employee = employee;
 	}
 
 	public String getChangeReason()

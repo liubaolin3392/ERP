@@ -9,7 +9,6 @@ public class Salary implements java.io.Serializable
 	// Fields
 
 	private String sid;
-	private Employee employee;
 	private Double baseWage;
 	private Double houseFund;
 	private Double oldageFund;
@@ -17,27 +16,6 @@ public class Salary implements java.io.Serializable
 	private Double unemploymentFund;
 	private Double reimbursement;
 	private Double award;
-
-	// Constructors
-
-	/** default constructor */
-	public Salary()
-	{
-	}
-
-	/** full constructor */
-	public Salary(Employee employee, Double baseWage, Double houseFund, Double oldageFund, Double medicalFund,
-			Double unemploymentFund, Double reimbursement, Double award)
-	{
-		this.employee = employee;
-		this.baseWage = baseWage;
-		this.houseFund = houseFund;
-		this.oldageFund = oldageFund;
-		this.medicalFund = medicalFund;
-		this.unemploymentFund = unemploymentFund;
-		this.reimbursement = reimbursement;
-		this.award = award;
-	}
 
 	// Property accessors
 	public String getSid()
@@ -48,16 +26,6 @@ public class Salary implements java.io.Serializable
 	public void setSid(String sid)
 	{
 		this.sid = sid;
-	}
-
-	public Employee getEmployee()
-	{
-		return this.employee;
-	}
-
-	public void setEmployee(Employee employee)
-	{
-		this.employee = employee;
 	}
 
 	public Double getBaseWage()

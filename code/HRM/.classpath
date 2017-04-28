@@ -6,36 +6,38 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.generic_6.0">
-		<attributes>
-			<attribute name="owner.project.facets" value="jst.web"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.jstl_1.2.1">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="WEB-INF/lib"/>
-			<attribute name="owner.project.facets" value="jst.web.jstl"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.spring_3.1">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="WEB-INF/lib"/>
-			<attribute name="owner.project.facets" value="me.spring"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.hibernate_4.1">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="WEB-INF/lib"/>
-			<attribute name="owner.project.facets" value="me.hibernate"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.struts_2.1">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="WEB-INF/lib"/>
-			<attribute name="owner.project.facets" value="web.struts2"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="lib" path="../../publicJARS/spring4.2.4-persistence/spring-jdbc-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/spring4.2.4-persistence/spring-orm-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/spring4.2.4-persistence/spring-tx-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/springmvc4.2.4/spring-web-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/springmvc4.2.4/spring-webmvc-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/spring4.2.4-core/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/spring4.2.4-core/spring-beans-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/spring4.2.4-core/spring-context-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/spring4.2.4-core/spring-core-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/spring4.2.4-core/spring-expression-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/spring4.2.4-core/spring-test-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/spring4.2.4-aop/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/spring4.2.4-aop/aspectj-1.7.1.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/spring4.2.4-aop/aspectjweaver-1.7.1.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/spring4.2.4-aop/spring-aop-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/mysql-connector-java-5.1.26/mysql-connector-java-5.1.26-bin.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/mybatis-3.3.0/asm-4.2.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/mybatis-3.3.0/cglib-3.1.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/mybatis-3.3.0/javassist-3.17.1-GA.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/mybatis-3.3.0/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/mybatis-3.3.0/log4j-api-2.2.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/mybatis-3.3.0/log4j-core-2.2.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/mybatis-3.3.0/mybatis-3.3.0.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/mybatis-3.3.0/mybatis-spring-1.2.2.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/mybatis-3.3.0/slf4j-api-1.7.12.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/mybatis-3.3.0/slf4j-log4j12-1.7.12.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/jstl1.2/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/ehcache2.6.5/ehcache-core-2.6.5.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/ehcache2.6.5/mybatis-ehcache-1.0.2.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/dbcp1.2.2/commons-dbcp-1.2.2.jar"/>
+	<classpathentry kind="lib" path="../../publicJARS/dbcp1.2.2/commons-pool-1.3.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

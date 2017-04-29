@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinasoft.model.dao.RecruitinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.chinasoft.model.entity.Recruitinfo" >
+    <id column="recruitId" property="recruitid" jdbcType="INTEGER" />
+    <result column="department" property="department" jdbcType="VARCHAR" />
+    <result column="position" property="position" jdbcType="VARCHAR" />
+    <result column="recruitStartTime" property="recruitstarttime" jdbcType="TIMESTAMP" />
+    <result column="recruitNum" property="recruitnum" jdbcType="INTEGER" />
+    <result column="recruitEndTime" property="recruitendtime" jdbcType="TIMESTAMP" />
+    <result column="republicTime" property="republictime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    recruitId, department, position, recruitStartTime, recruitNum, recruitEndTime, republicTime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from recruitinfo
+    where recruitId = #{recruitid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from recruitinfo
+    where recruitId = #{recruitid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.chinasoft.model.entity.Recruitinfo" >
+    insert into recruitinfo (recruitId, department, position, 
+      recruitStartTime, recruitNum, recruitEndTime, 
+      republicTime)
+    values (#{recruitid,jdbcType=INTEGER}, #{department,jdbcType=VARCHAR}, #{position,jdbcType=VARCHAR}, 
+      #{recruitstarttime,jdbcType=TIMESTAMP}, #{recruitnum,jdbcType=INTEGER}, #{recruitendtime,jdbcType=TIMESTAMP}, 
+      #{republictime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.chinasoft.model.entity.Recruitinfo" >
+    insert into recruitinfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="recruitid != null" >
+        recruitId,
+      </if>
+      <if test="department != null" >
+        department,
+      </if>
+      <if test="position != null" >
+        position,
+      </if>
+      <if test="recruitstarttime != null" >
+        recruitStartTime,
+      </if>
+      <if test="recruitnum != null" >
+        recruitNum,
+      </if>
+      <if test="recruitendtime != null" >
+        recruitEndTime,
+      </if>
+      <if test="republictime != null" >
+        republicTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="recruitid != null" >
+        #{recruitid,jdbcType=INTEGER},
+      </if>
+      <if test="department != null" >
+        #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null" >
+        #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="recruitstarttime != null" >
+        #{recruitstarttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recruitnum != null" >
+        #{recruitnum,jdbcType=INTEGER},
+      </if>
+      <if test="recruitendtime != null" >
+        #{recruitendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="republictime != null" >
+        #{republictime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.chinasoft.model.entity.Recruitinfo" >
+    update recruitinfo
+    <set >
+      <if test="department != null" >
+        department = #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null" >
+        position = #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="recruitstarttime != null" >
+        recruitStartTime = #{recruitstarttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recruitnum != null" >
+        recruitNum = #{recruitnum,jdbcType=INTEGER},
+      </if>
+      <if test="recruitendtime != null" >
+        recruitEndTime = #{recruitendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="republictime != null" >
+        republicTime = #{republictime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where recruitId = #{recruitid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.chinasoft.model.entity.Recruitinfo" >
+    update recruitinfo
+    set department = #{department,jdbcType=VARCHAR},
+      position = #{position,jdbcType=VARCHAR},
+      recruitStartTime = #{recruitstarttime,jdbcType=TIMESTAMP},
+      recruitNum = #{recruitnum,jdbcType=INTEGER},
+      recruitEndTime = #{recruitendtime,jdbcType=TIMESTAMP},
+      republicTime = #{republictime,jdbcType=TIMESTAMP}
+    where recruitId = #{recruitid,jdbcType=INTEGER}
+  </update>
+</mapper>

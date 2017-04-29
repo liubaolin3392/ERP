@@ -7,12 +7,6 @@ import javax.annotation.Resource;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.stereotype.Controller;
 
-
-
-
-
-
-
 import com.chinasoft.model.entity.Employee;
 import com.chinasoft.model.service.EmployeeService;
 import com.opensymphony.xwork2.ActionSupport;

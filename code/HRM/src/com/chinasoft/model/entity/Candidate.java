@@ -1,77 +1,73 @@
 package com.chinasoft.model.entity;
 
-/**
- * Candidate entity. @author MyEclipse Persistence Tools
- */
-public class Candidate implements java.io.Serializable
-{
+public class Candidate {
+    private Integer candidateid;
 
-	// Fields
-	private String candidateId;
-	private String candidateName;
-	private String department;
-	private String position;
-	private String candidateInfo;
-	private Integer candidateMark;
+    private String username;
 
-	public String getCandidateId()
-	{
-		return this.candidateId;
-	}
+    private String candidatename;
 
-	public void setCandidateId(String candidateId)
-	{
-		this.candidateId = candidateId;
-	}
+    private String department;
 
-	public String getCandidateName()
-	{
-		return this.candidateName;
-	}
+    private String position;
 
-	public void setCandidateName(String candidateName)
-	{
-		this.candidateName = candidateName;
-	}
+    private String candidateinfo;
 
-	public String getDepartment()
-	{
-		return this.department;
-	}
+    private Integer candidatemark;
 
-	public void setDepartment(String department)
-	{
-		this.department = department;
-	}
+    public Integer getCandidateid() {
+        return candidateid;
+    }
 
-	public String getPosition()
-	{
-		return this.position;
-	}
+    public void setCandidateid(Integer candidateid) {
+        this.candidateid = candidateid;
+    }
 
-	public void setPosition(String position)
-	{
-		this.position = position;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public String getCandidateInfo()
-	{
-		return this.candidateInfo;
-	}
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
+    }
 
-	public void setCandidateInfo(String candidateInfo)
-	{
-		this.candidateInfo = candidateInfo;
-	}
+    public String getCandidatename() {
+        return candidatename;
+    }
 
-	public Integer getCandidateMark()
-	{
-		return this.candidateMark;
-	}
+    public void setCandidatename(String candidatename) {
+        this.candidatename = candidatename == null ? null : candidatename.trim();
+    }
 
-	public void setCandidateMark(Integer candidateMark)
-	{
-		this.candidateMark = candidateMark;
-	}
+    public String getDepartment() {
+        return department;
+    }
 
+    public void setDepartment(String department) {
+        this.department = department == null ? null : department.trim();
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position == null ? null : position.trim();
+    }
+
+    public String getCandidateinfo() {
+        return candidateinfo;
+    }
+
+    public void setCandidateinfo(String candidateinfo) {
+        this.candidateinfo = candidateinfo == null ? null : candidateinfo.trim();
+    }
+
+    public Integer getCandidatemark() {
+        return candidatemark;
+    }
+
+    public void setCandidatemark(Integer candidatemark) {
+        this.candidatemark = candidatemark;
+    }
 }

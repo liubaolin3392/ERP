@@ -7,9 +7,9 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.chinasoft.model.dao.TrainFeedbackDAO;
 import com.chinasoft.model.entity.Employee;
 import com.chinasoft.model.entity.TrainFeedback;
+import com.chinasoft.model.entity.mapper.TrainFeedbackDAO;
 import com.chinasoft.model.service.TrainFeedbackService;
 @Service
 @Transactional

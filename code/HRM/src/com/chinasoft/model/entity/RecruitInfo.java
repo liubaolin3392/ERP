@@ -1,119 +1,75 @@
 package com.chinasoft.model.entity;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
-/**
- * RecruitInfo entity. @author MyEclipse Persistence Tools
- */
-public class RecruitInfo implements java.io.Serializable
-{
+public class Recruitinfo {
+    private Integer recruitid;
 
-	// Fields
+    private String department;
 
-	private String recruitId;
-	private String department;
-	private String position;
-	private Timestamp recruitStartTime;
-	private Integer recruitNum;
-	private Timestamp recruitEndTime;
-	private Timestamp republicTime;
+    private String position;
 
-	// Constructors
+    private Date recruitstarttime;
 
-	/** default constructor */
-	public RecruitInfo()
-	{
-	}
+    private Integer recruitnum;
 
-	/** minimal constructor */
-	public RecruitInfo(String department, String position, Timestamp recruitStartTime)
-	{
-		this.department = department;
-		this.position = position;
-		this.recruitStartTime = recruitStartTime;
-	}
+    private Date recruitendtime;
 
-	/** full constructor */
-	public RecruitInfo(String department, String position, Timestamp recruitStartTime, Integer recruitNum,
-			Timestamp recruitEndTime, Timestamp republicTime)
-	{
-		this.department = department;
-		this.position = position;
-		this.recruitStartTime = recruitStartTime;
-		this.recruitNum = recruitNum;
-		this.recruitEndTime = recruitEndTime;
-		this.republicTime = republicTime;
-	}
+    private Date republictime;
 
-	// Property accessors
-	public String getRecruitId()
-	{
-		return this.recruitId;
-	}
+    public Integer getRecruitid() {
+        return recruitid;
+    }
 
-	public void setRecruitId(String recruitId)
-	{
-		this.recruitId = recruitId;
-	}
+    public void setRecruitid(Integer recruitid) {
+        this.recruitid = recruitid;
+    }
 
-	public String getDepartment()
-	{
-		return this.department;
-	}
+    public String getDepartment() {
+        return department;
+    }
 
-	public void setDepartment(String department)
-	{
-		this.department = department;
-	}
+    public void setDepartment(String department) {
+        this.department = department == null ? null : department.trim();
+    }
 
-	public String getPosition()
-	{
-		return this.position;
-	}
+    public String getPosition() {
+        return position;
+    }
 
-	public void setPosition(String position)
-	{
-		this.position = position;
-	}
+    public void setPosition(String position) {
+        this.position = position == null ? null : position.trim();
+    }
 
-	public Timestamp getRecruitStartTime()
-	{
-		return this.recruitStartTime;
-	}
+    public Date getRecruitstarttime() {
+        return recruitstarttime;
+    }
 
-	public void setRecruitStartTime(Timestamp recruitStartTime)
-	{
-		this.recruitStartTime = recruitStartTime;
-	}
+    public void setRecruitstarttime(Date recruitstarttime) {
+        this.recruitstarttime = recruitstarttime;
+    }
 
-	public Integer getRecruitNum()
-	{
-		return this.recruitNum;
-	}
+    public Integer getRecruitnum() {
+        return recruitnum;
+    }
 
-	public void setRecruitNum(Integer recruitNum)
-	{
-		this.recruitNum = recruitNum;
-	}
+    public void setRecruitnum(Integer recruitnum) {
+        this.recruitnum = recruitnum;
+    }
 
-	public Timestamp getRecruitEndTime()
-	{
-		return this.recruitEndTime;
-	}
+    public Date getRecruitendtime() {
+        return recruitendtime;
+    }
 
-	public void setRecruitEndTime(Timestamp recruitEndTime)
-	{
-		this.recruitEndTime = recruitEndTime;
-	}
+    public void setRecruitendtime(Date recruitendtime) {
+        this.recruitendtime = recruitendtime;
+    }
 
-	public Timestamp getRepublicTime()
-	{
-		return this.republicTime;
-	}
+    public Date getRepublictime() {
+        return republictime;
+    }
 
-	public void setRepublicTime(Timestamp republicTime)
-	{
-		this.republicTime = republicTime;
-	}
-
+    public void setRepublictime(Date republictime) {
+        this.republictime = republictime;
+    }
 }

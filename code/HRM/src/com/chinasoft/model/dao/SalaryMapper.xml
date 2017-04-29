@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinasoft.model.dao.SalaryMapper" >
+  <resultMap id="BaseResultMap" type="com.chinasoft.model.entity.Salary" >
+    <id column="sid" property="sid" jdbcType="INTEGER" />
+    <result column="userName" property="username" jdbcType="DECIMAL" />
+    <result column="baseWage" property="basewage" jdbcType="DECIMAL" />
+    <result column="houseFund" property="housefund" jdbcType="DECIMAL" />
+    <result column="oldageFund" property="oldagefund" jdbcType="DECIMAL" />
+    <result column="medicalFund" property="medicalfund" jdbcType="DECIMAL" />
+    <result column="reimbursement" property="reimbursement" jdbcType="DECIMAL" />
+    <result column="unemploymentFund" property="unemploymentfund" jdbcType="DECIMAL" />
+    <result column="award" property="award" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    sid, userName, baseWage, houseFund, oldageFund, medicalFund, reimbursement, unemploymentFund, 
+    award
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from salary
+    where sid = #{sid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from salary
+    where sid = #{sid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.chinasoft.model.entity.Salary" >
+    insert into salary (sid, userName, baseWage, 
+      houseFund, oldageFund, medicalFund, 
+      reimbursement, unemploymentFund, award
+      )
+    values (#{sid,jdbcType=INTEGER}, #{username,jdbcType=DECIMAL}, #{basewage,jdbcType=DECIMAL}, 
+      #{housefund,jdbcType=DECIMAL}, #{oldagefund,jdbcType=DECIMAL}, #{medicalfund,jdbcType=DECIMAL}, 
+      #{reimbursement,jdbcType=DECIMAL}, #{unemploymentfund,jdbcType=DECIMAL}, #{award,jdbcType=DECIMAL}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.chinasoft.model.entity.Salary" >
+    insert into salary
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="sid != null" >
+        sid,
+      </if>
+      <if test="username != null" >
+        userName,
+      </if>
+      <if test="basewage != null" >
+        baseWage,
+      </if>
+      <if test="housefund != null" >
+        houseFund,
+      </if>
+      <if test="oldagefund != null" >
+        oldageFund,
+      </if>
+      <if test="medicalfund != null" >
+        medicalFund,
+      </if>
+      <if test="reimbursement != null" >
+        reimbursement,
+      </if>
+      <if test="unemploymentfund != null" >
+        unemploymentFund,
+      </if>
+      <if test="award != null" >
+        award,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="sid != null" >
+        #{sid,jdbcType=INTEGER},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=DECIMAL},
+      </if>
+      <if test="basewage != null" >
+        #{basewage,jdbcType=DECIMAL},
+      </if>
+      <if test="housefund != null" >
+        #{housefund,jdbcType=DECIMAL},
+      </if>
+      <if test="oldagefund != null" >
+        #{oldagefund,jdbcType=DECIMAL},
+      </if>
+      <if test="medicalfund != null" >
+        #{medicalfund,jdbcType=DECIMAL},
+      </if>
+      <if test="reimbursement != null" >
+        #{reimbursement,jdbcType=DECIMAL},
+      </if>
+      <if test="unemploymentfund != null" >
+        #{unemploymentfund,jdbcType=DECIMAL},
+      </if>
+      <if test="award != null" >
+        #{award,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.chinasoft.model.entity.Salary" >
+    update salary
+    <set >
+      <if test="username != null" >
+        userName = #{username,jdbcType=DECIMAL},
+      </if>
+      <if test="basewage != null" >
+        baseWage = #{basewage,jdbcType=DECIMAL},
+      </if>
+      <if test="housefund != null" >
+        houseFund = #{housefund,jdbcType=DECIMAL},
+      </if>
+      <if test="oldagefund != null" >
+        oldageFund = #{oldagefund,jdbcType=DECIMAL},
+      </if>
+      <if test="medicalfund != null" >
+        medicalFund = #{medicalfund,jdbcType=DECIMAL},
+      </if>
+      <if test="reimbursement != null" >
+        reimbursement = #{reimbursement,jdbcType=DECIMAL},
+      </if>
+      <if test="unemploymentfund != null" >
+        unemploymentFund = #{unemploymentfund,jdbcType=DECIMAL},
+      </if>
+      <if test="award != null" >
+        award = #{award,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where sid = #{sid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.chinasoft.model.entity.Salary" >
+    update salary
+    set userName = #{username,jdbcType=DECIMAL},
+      baseWage = #{basewage,jdbcType=DECIMAL},
+      houseFund = #{housefund,jdbcType=DECIMAL},
+      oldageFund = #{oldagefund,jdbcType=DECIMAL},
+      medicalFund = #{medicalfund,jdbcType=DECIMAL},
+      reimbursement = #{reimbursement,jdbcType=DECIMAL},
+      unemploymentFund = #{unemploymentfund,jdbcType=DECIMAL},
+      award = #{award,jdbcType=DECIMAL}
+    where sid = #{sid,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -7,8 +7,8 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.chinasoft.model.dao.TrainPlanDAO;
 import com.chinasoft.model.entity.TrainPlan;
+import com.chinasoft.model.entity.mapper.TrainPlanDAO;
 import com.chinasoft.model.service.TrainPlanService;
 
 @Service

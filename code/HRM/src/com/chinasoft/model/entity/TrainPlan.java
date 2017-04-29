@@ -1,82 +1,96 @@
 package com.chinasoft.model.entity;
 
-import java.sql.Timestamp;
-import java.util.HashSet;
-import java.util.Set;
+import java.math.BigDecimal;
+import java.util.Date;
 
-/**
- * TrainPlan entity. @author MyEclipse Persistence Tools
- */
-public class TrainPlan implements java.io.Serializable
-{
+public class Trainplan {
+    private Integer trainplanid;
 
-	// Fields
+    private String traindirect;
 
-	private String trainPlanId;
-	private String trainDirect;
-	private String trainObject;
-	private String trainContent;
-	private Timestamp trainStartTime;
-	private String trainContinueTime;
-	
-	// Property accessors
-	public String getTrainPlanId()
-	{
-		return this.trainPlanId;
-	}
+    private String trainobject;
 
-	public void setTrainPlanId(String trainPlanId)
-	{
-		this.trainPlanId = trainPlanId;
-	}
+    private String traincontent;
 
-	public String getTrainDirect()
-	{
-		return this.trainDirect;
-	}
+    private Date trainstarttime;
 
-	public void setTrainDirect(String trainDirect)
-	{
-		this.trainDirect = trainDirect;
-	}
+    private String traincontinuetime;
 
-	public String getTrainObject()
-	{
-		return this.trainObject;
-	}
+    private String traininfo;
 
-	public void setTrainObject(String trainObject)
-	{
-		this.trainObject = trainObject;
-	}
+    private String trainplace;
 
-	public String getTrainContent()
-	{
-		return this.trainContent;
-	}
+    private BigDecimal trainprice;
 
-	public void setTrainContent(String trainContent)
-	{
-		this.trainContent = trainContent;
-	}
+    public Integer getTrainplanid() {
+        return trainplanid;
+    }
 
-	public Timestamp getTrainStartTime()
-	{
-		return this.trainStartTime;
-	}
+    public void setTrainplanid(Integer trainplanid) {
+        this.trainplanid = trainplanid;
+    }
 
-	public void setTrainStartTime(Timestamp trainStartTime)
-	{
-		this.trainStartTime = trainStartTime;
-	}
+    public String getTraindirect() {
+        return traindirect;
+    }
 
-	public String getTrainContinueTime()
-	{
-		return this.trainContinueTime;
-	}
+    public void setTraindirect(String traindirect) {
+        this.traindirect = traindirect == null ? null : traindirect.trim();
+    }
 
-	public void setTrainContinueTime(String trainContinueTime)
-	{
-		this.trainContinueTime = trainContinueTime;
-	}
+    public String getTrainobject() {
+        return trainobject;
+    }
+
+    public void setTrainobject(String trainobject) {
+        this.trainobject = trainobject == null ? null : trainobject.trim();
+    }
+
+    public String getTraincontent() {
+        return traincontent;
+    }
+
+    public void setTraincontent(String traincontent) {
+        this.traincontent = traincontent == null ? null : traincontent.trim();
+    }
+
+    public Date getTrainstarttime() {
+        return trainstarttime;
+    }
+
+    public void setTrainstarttime(Date trainstarttime) {
+        this.trainstarttime = trainstarttime;
+    }
+
+    public String getTraincontinuetime() {
+        return traincontinuetime;
+    }
+
+    public void setTraincontinuetime(String traincontinuetime) {
+        this.traincontinuetime = traincontinuetime == null ? null : traincontinuetime.trim();
+    }
+
+    public String getTraininfo() {
+        return traininfo;
+    }
+
+    public void setTraininfo(String traininfo) {
+        this.traininfo = traininfo == null ? null : traininfo.trim();
+    }
+
+    public String getTrainplace() {
+        return trainplace;
+    }
+
+    public void setTrainplace(String trainplace) {
+        this.trainplace = trainplace == null ? null : trainplace.trim();
+    }
+
+    public BigDecimal getTrainprice() {
+        return trainprice;
+    }
+
+    public void setTrainprice(BigDecimal trainprice) {
+        this.trainprice = trainprice;
+    }
 }

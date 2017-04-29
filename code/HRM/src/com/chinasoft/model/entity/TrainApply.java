@@ -1,57 +1,73 @@
 package com.chinasoft.model.entity;
 
-/**
- * TrainApply entity. @author MyEclipse Persistence Tools
- */
-public class TrainApply implements java.io.Serializable
-{
+public class Trainapply {
+    private Integer trainapplyid;
 
-	// Fields
+    private String username;
 
-	private String trainApplyId;
-	private String trainDirect;
-	private String trainLeader;
-	private Integer trainMark;
+    private String traindirect;
 
-	// Property accessors
-	public String getTrainApplyId()
-	{
-		return this.trainApplyId;
-	}
+    private String trainleader;
 
-	public void setTrainApplyId(String trainApplyId)
-	{
-		this.trainApplyId = trainApplyId;
-	}
+    private Integer trainmark;
 
-	public String getTrainDirect()
-	{
-		return this.trainDirect;
-	}
+    private String trainevaluation;
 
-	public void setTrainDirect(String trainDirect)
-	{
-		this.trainDirect = trainDirect;
-	}
+    private String trainfeedback;
 
-	public String getTrainLeader()
-	{
-		return this.trainLeader;
-	}
+    public Integer getTrainapplyid() {
+        return trainapplyid;
+    }
 
-	public void setTrainLeader(String trainLeader)
-	{
-		this.trainLeader = trainLeader;
-	}
+    public void setTrainapplyid(Integer trainapplyid) {
+        this.trainapplyid = trainapplyid;
+    }
 
-	public Integer getTrainMark()
-	{
-		return this.trainMark;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public void setTrainMark(Integer trainMark)
-	{
-		this.trainMark = trainMark;
-	}
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
+    }
 
+    public String getTraindirect() {
+        return traindirect;
+    }
+
+    public void setTraindirect(String traindirect) {
+        this.traindirect = traindirect == null ? null : traindirect.trim();
+    }
+
+    public String getTrainleader() {
+        return trainleader;
+    }
+
+    public void setTrainleader(String trainleader) {
+        this.trainleader = trainleader == null ? null : trainleader.trim();
+    }
+
+    public Integer getTrainmark() {
+        return trainmark;
+    }
+
+    public void setTrainmark(Integer trainmark) {
+        this.trainmark = trainmark;
+    }
+
+    public String getTrainevaluation() {
+        return trainevaluation;
+    }
+
+    public void setTrainevaluation(String trainevaluation) {
+        this.trainevaluation = trainevaluation == null ? null : trainevaluation.trim();
+    }
+
+    public String getTrainfeedback() {
+        return trainfeedback;
+    }
+
+    public void setTrainfeedback(String trainfeedback) {
+        this.trainfeedback = trainfeedback == null ? null : trainfeedback.trim();
+    }
 }

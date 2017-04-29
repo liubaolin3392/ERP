@@ -1,101 +1,95 @@
 package com.chinasoft.model.entity;
 
-/**
- * Salary entity. @author MyEclipse Persistence Tools
- */
-public class Salary implements java.io.Serializable
-{
+import java.math.BigDecimal;
 
-	// Fields
+public class Salary {
+    private Integer sid;
 
-	private String sid;
-	private Double baseWage;
-	private Double houseFund;
-	private Double oldageFund;
-	private Double medicalFund;
-	private Double unemploymentFund;
-	private Double reimbursement;
-	private Double award;
+    private BigDecimal username;
 
-	// Property accessors
-	public String getSid()
-	{
-		return this.sid;
-	}
+    private BigDecimal basewage;
 
-	public void setSid(String sid)
-	{
-		this.sid = sid;
-	}
+    private BigDecimal housefund;
 
-	public Double getBaseWage()
-	{
-		return this.baseWage;
-	}
+    private BigDecimal oldagefund;
 
-	public void setBaseWage(Double baseWage)
-	{
-		this.baseWage = baseWage;
-	}
+    private BigDecimal medicalfund;
 
-	public Double getHouseFund()
-	{
-		return this.houseFund;
-	}
+    private BigDecimal reimbursement;
 
-	public void setHouseFund(Double houseFund)
-	{
-		this.houseFund = houseFund;
-	}
+    private BigDecimal unemploymentfund;
 
-	public Double getOldageFund()
-	{
-		return this.oldageFund;
-	}
+    private BigDecimal award;
 
-	public void setOldageFund(Double oldageFund)
-	{
-		this.oldageFund = oldageFund;
-	}
+    public Integer getSid() {
+        return sid;
+    }
 
-	public Double getMedicalFund()
-	{
-		return this.medicalFund;
-	}
+    public void setSid(Integer sid) {
+        this.sid = sid;
+    }
 
-	public void setMedicalFund(Double medicalFund)
-	{
-		this.medicalFund = medicalFund;
-	}
+    public BigDecimal getUsername() {
+        return username;
+    }
 
-	public Double getUnemploymentFund()
-	{
-		return this.unemploymentFund;
-	}
+    public void setUsername(BigDecimal username) {
+        this.username = username;
+    }
 
-	public void setUnemploymentFund(Double unemploymentFund)
-	{
-		this.unemploymentFund = unemploymentFund;
-	}
+    public BigDecimal getBasewage() {
+        return basewage;
+    }
 
-	public Double getReimbursement()
-	{
-		return this.reimbursement;
-	}
+    public void setBasewage(BigDecimal basewage) {
+        this.basewage = basewage;
+    }
 
-	public void setReimbursement(Double reimbursement)
-	{
-		this.reimbursement = reimbursement;
-	}
+    public BigDecimal getHousefund() {
+        return housefund;
+    }
 
-	public Double getAward()
-	{
-		return this.award;
-	}
+    public void setHousefund(BigDecimal housefund) {
+        this.housefund = housefund;
+    }
 
-	public void setAward(Double award)
-	{
-		this.award = award;
-	}
+    public BigDecimal getOldagefund() {
+        return oldagefund;
+    }
 
+    public void setOldagefund(BigDecimal oldagefund) {
+        this.oldagefund = oldagefund;
+    }
+
+    public BigDecimal getMedicalfund() {
+        return medicalfund;
+    }
+
+    public void setMedicalfund(BigDecimal medicalfund) {
+        this.medicalfund = medicalfund;
+    }
+
+    public BigDecimal getReimbursement() {
+        return reimbursement;
+    }
+
+    public void setReimbursement(BigDecimal reimbursement) {
+        this.reimbursement = reimbursement;
+    }
+
+    public BigDecimal getUnemploymentfund() {
+        return unemploymentfund;
+    }
+
+    public void setUnemploymentfund(BigDecimal unemploymentfund) {
+        this.unemploymentfund = unemploymentfund;
+    }
+
+    public BigDecimal getAward() {
+        return award;
+    }
+
+    public void setAward(BigDecimal award) {
+        this.award = award;
+    }
 }

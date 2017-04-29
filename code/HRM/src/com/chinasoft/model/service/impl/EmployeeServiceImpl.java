@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.chinasoft.model.dao.EmployeeMapper;
 import com.chinasoft.model.entity.Employee;
+import com.chinasoft.model.entity.mapper.EmployeeMapper;
 import com.chinasoft.model.service.EmployeeService;
 
 @Service

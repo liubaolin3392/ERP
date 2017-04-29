@@ -1,92 +1,83 @@
 package com.chinasoft.model.entity;
 
-import java.sql.Timestamp;
+public class Attendance {
+    private Integer aid;
 
-/**
- * Attendance entity. @author MyEclipse Persistence Tools
- */
-public class Attendance implements java.io.Serializable
-{
+    private String username;
 
-	// Fields
+    private Integer late;
 
-	private String aid;
-	private Integer late;
-	private Integer leaveEarly;
-	private Integer absent;
-	private Integer attendance;
-	private Timestamp inTime;
-	private Timestamp outTime;
-	// Constructors
+    private Integer leaveearly;
 
-	public String getAid()
-	{
-		return this.aid;
-	}
+    private Integer absent;
 
-	public void setAid(String aid)
-	{
-		this.aid = aid;
-	}
+    private Integer attendance;
 
-	public Integer getLate()
-	{
-		return this.late;
-	}
+    private Integer intime;
 
-	public void setLate(Integer late)
-	{
-		this.late = late;
-	}
+    private Integer outtime;
 
-	public Integer getLeaveEarly()
-	{
-		return this.leaveEarly;
-	}
+    public Integer getAid() {
+        return aid;
+    }
 
-	public void setLeaveEarly(Integer leaveEarly)
-	{
-		this.leaveEarly = leaveEarly;
-	}
+    public void setAid(Integer aid) {
+        this.aid = aid;
+    }
 
-	public Integer getAbsent()
-	{
-		return this.absent;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public void setAbsent(Integer absent)
-	{
-		this.absent = absent;
-	}
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
+    }
 
-	public Integer getAttendance()
-	{
-		return this.attendance;
-	}
+    public Integer getLate() {
+        return late;
+    }
 
-	public void setAttendance(Integer attendance)
-	{
-		this.attendance = attendance;
-	}
+    public void setLate(Integer late) {
+        this.late = late;
+    }
 
-	public Timestamp getInTime()
-	{
-		return inTime;
-	}
+    public Integer getLeaveearly() {
+        return leaveearly;
+    }
 
-	public void setInTime(Timestamp inTime)
-	{
-		this.inTime = inTime;
-	}
+    public void setLeaveearly(Integer leaveearly) {
+        this.leaveearly = leaveearly;
+    }
 
-	public Timestamp getOutTime()
-	{
-		return outTime;
-	}
+    public Integer getAbsent() {
+        return absent;
+    }
 
-	public void setOutTime(Timestamp outTime)
-	{
-		this.outTime = outTime;
-	}
+    public void setAbsent(Integer absent) {
+        this.absent = absent;
+    }
 
+    public Integer getAttendance() {
+        return attendance;
+    }
+
+    public void setAttendance(Integer attendance) {
+        this.attendance = attendance;
+    }
+
+    public Integer getIntime() {
+        return intime;
+    }
+
+    public void setIntime(Integer intime) {
+        this.intime = intime;
+    }
+
+    public Integer getOuttime() {
+        return outtime;
+    }
+
+    public void setOuttime(Integer outtime) {
+        this.outtime = outtime;
+    }
 }

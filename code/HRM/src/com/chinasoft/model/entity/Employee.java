@@ -1,125 +1,103 @@
 package com.chinasoft.model.entity;
 
-import java.util.HashSet;
-import java.util.Set;
+public class Employee {
+    private Integer eid;
 
-/**
- * Employee entity. @author MyEclipse Persistence Tools
- */
-public class Employee implements java.io.Serializable
-{
+    private String userid;
 
-	// Fields
+    private String username;
 
-	private String eid;
-	private String userId;
-	private String userName;
-	private String department;
-	private String position;
-	private String password;
-	private String phone;
-	private Integer userLevel;
-	private Integer age;
-	private String sex;
+    private String department;
 
-	// Property accessors
-	public String getEid()
-	{
-		return this.eid;
-	}
+    private String position;
 
-	public void setEid(String eid)
-	{
-		this.eid = eid;
-	}
+    private String password;
 
-	public String getUserId()
-	{
-		return this.userId;
-	}
+    private String phone;
 
-	public void setUserId(String userId)
-	{
-		this.userId = userId;
-	}
+    private Integer userlevel;
 
-	public String getUserName()
-	{
-		return this.userName;
-	}
+    private Integer age;
 
-	public void setUserName(String userName)
-	{
-		this.userName = userName;
-	}
+    private String sex;
 
-	public String getDepartment()
-	{
-		return this.department;
-	}
+    public Integer getEid() {
+        return eid;
+    }
 
-	public void setDepartment(String department)
-	{
-		this.department = department;
-	}
+    public void setEid(Integer eid) {
+        this.eid = eid;
+    }
 
-	public String getPosition()
-	{
-		return this.position;
-	}
+    public String getUserid() {
+        return userid;
+    }
 
-	public void setPosition(String position)
-	{
-		this.position = position;
-	}
+    public void setUserid(String userid) {
+        this.userid = userid == null ? null : userid.trim();
+    }
 
-	public String getPassword()
-	{
-		return this.password;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public void setPassword(String password)
-	{
-		this.password = password;
-	}
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
+    }
 
-	public String getPhone()
-	{
-		return this.phone;
-	}
+    public String getDepartment() {
+        return department;
+    }
 
-	public void setPhone(String phone)
-	{
-		this.phone = phone;
-	}
+    public void setDepartment(String department) {
+        this.department = department == null ? null : department.trim();
+    }
 
-	public Integer getUserLevel()
-	{
-		return this.userLevel;
-	}
+    public String getPosition() {
+        return position;
+    }
 
-	public void setUserLevel(Integer userLevel)
-	{
-		this.userLevel = userLevel;
-	}
+    public void setPosition(String position) {
+        this.position = position == null ? null : position.trim();
+    }
 
-	public Integer getAge()
-	{
-		return this.age;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public void setAge(Integer age)
-	{
-		this.age = age;
-	}
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
+    }
 
-	public String getSex()
-	{
-		return this.sex;
-	}
+    public String getPhone() {
+        return phone;
+    }
 
-	public void setSex(String sex)
-	{
-		this.sex = sex;
-	}
+    public void setPhone(String phone) {
+        this.phone = phone == null ? null : phone.trim();
+    }
+
+    public Integer getUserlevel() {
+        return userlevel;
+    }
+
+    public void setUserlevel(Integer userlevel) {
+        this.userlevel = userlevel;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex == null ? null : sex.trim();
+    }
 }

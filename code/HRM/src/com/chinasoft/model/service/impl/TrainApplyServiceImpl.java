@@ -4,8 +4,8 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.chinasoft.model.dao.TrainApplyDAO;
 import com.chinasoft.model.entity.TrainApply;
+import com.chinasoft.model.entity.mapper.TrainApplyDAO;
 import com.chinasoft.model.service.TrainApplyService;
 @Service
 public class TrainApplyServiceImpl implements TrainApplyService {

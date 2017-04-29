@@ -6,8 +6,8 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.chinasoft.model.dao.TrainEvaluationDAO;
 import com.chinasoft.model.entity.TrainEvaluation;
+import com.chinasoft.model.entity.mapper.TrainEvaluationDAO;
 import com.chinasoft.model.service.TrainEvaluationService;
 
 @Service

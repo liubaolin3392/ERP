@@ -1,83 +1,53 @@
 package com.chinasoft.model.entity;
 
-/**
- * Contract entity. @author MyEclipse Persistence Tools
- */
-public class Contract implements java.io.Serializable
-{
+public class Contract {
+    private Integer contractid;
 
-	// Fields
+    private String username;
 
-	private String contractId;
-	private Employee employee;
-	private String contractName;
-	private String contractType;
-	private String contractContect;
+    private String contractname;
 
-	// Constructors
+    private String contracttype;
 
-	/** default constructor */
-	public Contract()
-	{
-	}
+    private String contractcontect;
 
-	/** full constructor */
-	public Contract(Employee employee, String contractName, String contractType, String contractContect)
-	{
-		this.employee = employee;
-		this.contractName = contractName;
-		this.contractType = contractType;
-		this.contractContect = contractContect;
-	}
+    public Integer getContractid() {
+        return contractid;
+    }
 
-	public String getContractId()
-	{
-		return this.contractId;
-	}
+    public void setContractid(Integer contractid) {
+        this.contractid = contractid;
+    }
 
-	public void setContractId(String contractId)
-	{
-		this.contractId = contractId;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public Employee getEmployee()
-	{
-		return this.employee;
-	}
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
+    }
 
-	public void setEmployee(Employee employee)
-	{
-		this.employee = employee;
-	}
+    public String getContractname() {
+        return contractname;
+    }
 
-	public String getContractName()
-	{
-		return this.contractName;
-	}
+    public void setContractname(String contractname) {
+        this.contractname = contractname == null ? null : contractname.trim();
+    }
 
-	public void setContractName(String contractName)
-	{
-		this.contractName = contractName;
-	}
+    public String getContracttype() {
+        return contracttype;
+    }
 
-	public String getContractType()
-	{
-		return this.contractType;
-	}
+    public void setContracttype(String contracttype) {
+        this.contracttype = contracttype == null ? null : contracttype.trim();
+    }
 
-	public void setContractType(String contractType)
-	{
-		this.contractType = contractType;
-	}
+    public String getContractcontect() {
+        return contractcontect;
+    }
 
-	public String getContractContect()
-	{
-		return this.contractContect;
-	}
-
-	public void setContractContect(String contractContect)
-	{
-		this.contractContect = contractContect;
-	}
-
+    public void setContractcontect(String contractcontect) {
+        this.contractcontect = contractcontect == null ? null : contractcontect.trim();
+    }
 }

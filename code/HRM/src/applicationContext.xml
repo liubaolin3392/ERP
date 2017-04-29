@@ -15,49 +15,25 @@
 
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></property>
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
 		<property name="url"
-			value="jdbc:sqlserver://localhost:1433;databaseName=HRM">
+			value="jdbc:mysql://localhost:3306/liubaolin">
 		</property>
-		<property name="username" value="sa"></property>
-		<property name="password" value="123456789"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="123456"></property>
 	</bean>
-	<bean id="sessionFactory"
-		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<property name="dataSource">
-			<ref bean="dataSource" />
-		</property>
-		<property name="hibernateProperties">
-			<props>
-				<prop key="hibernate.dialect">
-					org.hibernate.dialect.SQLServerDialect
-				</prop>
-			</props>
-		</property>
-		<property name="annotatedClasses">
-			<list>
-				<value>com.chinasoft.model.entity.Candidate</value>
-				<value>com.chinasoft.model.entity.RecruitInfo</value>
-				<value>com.chinasoft.model.entity.TrainPlan</value>
-				<value>com.chinasoft.model.entity.TrainProgram</value>
-				<value>com.chinasoft.model.entity.Contract</value>
-				<value>com.chinasoft.model.entity.Salary</value>
-				<value>com.chinasoft.model.entity.TrainFeedback</value>
-				<value>
-					com.chinasoft.model.entity.TrainEvaluation
-				</value>
-				<value>
-					com.chinasoft.model.entity.PersonnelChange
-				</value>
-				<value>com.chinasoft.model.entity.Employee</value>
-				<value>com.chinasoft.model.entity.Attendance</value>
-				<value>com.chinasoft.model.entity.TrainApply</value>
-			</list>
-		</property>
+	<bean id="sessionFactory" class = "org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		
 	</bean>
-	<bean id="transactionManager"
-		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-		<property name="sessionFactory" ref="sessionFactory" />
-	</bean>
-	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	 <!-- 事务管理 -->
+    <bean id="transactionManager"
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+ 
+    <!-- 事务注解支持 -->
+    <tx:annotation-driven transaction-manager="transactionManager" />
+	
 	</beans>

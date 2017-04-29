@@ -1,49 +1,43 @@
 package com.chinasoft.model.entity;
 
-/**
- * PersonnelChange entity. @author MyEclipse Persistence Tools
- */
-public class PersonnelChange implements java.io.Serializable
-{
+public class Personnelchange {
+    private Integer pcid;
 
-	// Fields
+    private String username;
 
-	private String pcId;
-	private String changeReason;
-	private Integer doneMark;
+    private String changereason;
 
-	// Constructors
+    private Integer donemark;
 
+    public Integer getPcid() {
+        return pcid;
+    }
 
-	// Property accessors
-	public String getPcId()
-	{
-		return this.pcId;
-	}
+    public void setPcid(Integer pcid) {
+        this.pcid = pcid;
+    }
 
-	public void setPcId(String pcId)
-	{
-		this.pcId = pcId;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public String getChangeReason()
-	{
-		return this.changeReason;
-	}
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
+    }
 
-	public void setChangeReason(String changeReason)
-	{
-		this.changeReason = changeReason;
-	}
+    public String getChangereason() {
+        return changereason;
+    }
 
-	public Integer getDoneMark()
-	{
-		return this.doneMark;
-	}
+    public void setChangereason(String changereason) {
+        this.changereason = changereason == null ? null : changereason.trim();
+    }
 
-	public void setDoneMark(Integer doneMark)
-	{
-		this.doneMark = doneMark;
-	}
+    public Integer getDonemark() {
+        return donemark;
+    }
 
+    public void setDonemark(Integer donemark) {
+        this.donemark = donemark;
+    }
 }

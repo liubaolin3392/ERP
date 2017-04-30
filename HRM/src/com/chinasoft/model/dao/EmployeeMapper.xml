@@ -20,8 +20,16 @@
     select 
     <include refid="Base_Column_List" />
     from employee
+    where userId = #{userid} and password = #{password} and userLevel = #{userlevel}
+  </select>
+  
+  <select id="selectByEmployee" resultMap="BaseResultMap" parameterType="com.chinasoft.model.entity.Employee" >
+    select 
+    <include refid="Base_Column_List" />
+    from employee
     where eid = #{eid,jdbcType=INTEGER}
   </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from employee
     where eid = #{eid,jdbcType=INTEGER}

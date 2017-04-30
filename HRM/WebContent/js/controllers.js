@@ -1,11 +1,11 @@
-mianApp.controller('LoginCtrl',['$scope', '$state', '$location', function($scope, $state, $location){
+mianApp.controller('LoginCtrl',['$scope', '$state', '$location', '$http',function($scope, $state, $location, $http){
     $scope.loginIn = function()
    {
    	
    	 $http({
-        method  : 'POST',
-        url     : '/login.action',
-        data    : $.param($scope.Employee)
+        method  : 'GET',
+        url     : 'HRM/login/checkLoginInfo.action',
+        params  : {'userid':$scope.Employee.userid,'password':$scope.Employee.password, 'userLevel': $scope.Employee.userLevel}
    		})
         .success(function(data) {
             console.log(data);

@@ -2,59 +2,78 @@ package com.chinasoft.web.action;
 
 import javax.annotation.Resource;
 
-import org.apache.struts2.ServletActionContext;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.chinasoft.model.entity.Employee;
-import com.chinasoft.model.service.LoginService;
+import com.chinasoft.model.service.LoginServiceImpl;
 
 @Controller
-public class LoginAction {
-		
-		private Employee employee;
-		private String msg;
-		@Resource
-		private LoginService loginService;
-		
+@SessionAttributes("employee")   
+@RequestMapping("login")
+public class LoginAction
+{
 
-		
-		public Employee getEmployee() {
-			return employee;
-		}
-		public void setEmployee(Employee employee) {
-			this.employee = employee;
-		}
-		public String getMsg() {
-			return msg;
-		}
-		public void setMsg(String msg) {
-			this.msg = msg;
-		}
+	@Resource
+	private LoginServiceImpl loginServiceImpl;
+	private Employee employee;
+	private String msg;
 
-		public String login(){			
-			Employee  loginA = loginService.checkLogin(employee);
-			String result = "";
-			if (loginA == null) {
-				msg = "账号或密码错误";
-				return "failure";				
-			}else {			
-				ServletActionContext.getRequest().getSession().setAttribute("loginin", loginA);
-				int level = loginA.getUserLevel();
- 				switch (level) {
+	public Employee getEmployee()
+	{
+		return employee;
+	}
+
+	public void setEmployee(Employee employee)
+	{
+		this.employee = employee;
+	}
+
+	public String getMsg()
+	{
+		return msg;
+	}
+
+	public void setMsg(String msg)
+	{
+		this.msg = msg;
+	}
+
+	@RequestMapping(value = "checkLoginInfo", method = RequestMethod.GET)
+	@ResponseBody
+	public  String login(@RequestBody Employee employee, ModelMap modelMap)
+	{
+		Employee loginA = loginServiceImpl.checkLoginData(employee);
+		String result = "";
+		if (loginA == null)
+		{
+			return "failure";
+		} else
+		{
+			modelMap.addAttribute("employee", loginA);
+			int level = loginA.getUserlevel();
+			switch (level)
+				{
 				case 1:
-					result =  "employee";
+					result = "employee";
 					break;
 				case 2:
-					result =  "branchManager";
+					result = "branchManager";
 					break;
 				default:
-					result =  "president";
+					result = "president";
 					break;
 				}
-			}			
-			return result;
-		}	
-			
-	
-		
+		}
+		return result;
+	}
+	@RequestMapping(value = "login" ,method = RequestMethod.GET)
+	public String tologin() {
+		return "login";
+	}	
 }

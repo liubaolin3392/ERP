@@ -10,6 +10,8 @@ public interface EmployeeMapper {
     int insertSelective(Employee record);
 
     Employee selectByPrimaryKey(Integer eid);
+    
+    Employee selectByEmployee(Employee employee);
 
     int updateByPrimaryKeySelective(Employee record);
 

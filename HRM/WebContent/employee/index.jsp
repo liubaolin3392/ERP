@@ -11,10 +11,10 @@
 			name="topFrame" scrolling="no" marginwidth="0" marginheight="0"
 			target="main" />
 		<frameset cols="200,*" rows="560,*" id="frame">
-			<frame src="<%=request.getContextPath()%>/employee/left.jsp" name="leftFrame" noresize="noresize"
+			<frame src="left.jsp" name="leftFrame" noresize="noresize"
 				marginwidth="0" marginheight="0" frameborder="0" scrolling="no"
 				target="main" />
-			<frame src="<%=request.getContextPath()%>/right.jsp" name="main" marginwidth="0"
+			<frame src="/right.jsp" name="main" marginwidth="0"
 				marginheight="0" frameborder="0" scrolling="auto" target="_self" />
 		</frameset>
 		<frame src="<%=request.getContextPath()%>/bottom.jsp" noresize="noresize" frameborder="NO"

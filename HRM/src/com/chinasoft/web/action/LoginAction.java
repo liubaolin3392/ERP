@@ -1,7 +1,5 @@
 package com.chinasoft.web.action;
 
-import java.lang.reflect.Type;
-
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;

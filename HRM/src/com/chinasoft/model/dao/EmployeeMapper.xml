@@ -23,6 +23,16 @@
     where eid = #{eid,jdbcType=INTEGER}
   </select>
   
+  <select id="getAllEmployee" resultMap="BaseResultMap" parameterType="map" >
+    select 
+    <include refid="Base_Column_List" />
+    from employee
+    <if test="pageSize!=null and page!=null">
+    	LIMIT ${page},${pageSize}
+    </if>
+  </select>
+  
+  
   <select id="selectByEmployee" resultMap="BaseResultMap" parameterType="com.chinasoft.model.entity.Employee" >
     select 
     <include refid="Base_Column_List" />

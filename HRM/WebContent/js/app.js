@@ -1,4 +1,4 @@
-var mianApp = angular.module('mianApp',['ui.router','LoginModule','EmployeeModule']);
+var mianApp = angular.module('mianApp',['ui.router','ngGrid','LoginModule','EmployeeModule']);
 
 mianApp.run(['$rootScope', '$state', '$stateParams',
      function($rootScope, $state, $stateParams) {
@@ -32,8 +32,7 @@ mianApp.config(function($stateProvider, $urlRouterProvider){
 				templateUrl : 'tpls/top.html'
 			},
 			'left@employee':{
-				templateUrl : getLeftTempUrl,
-				controller: 'EmployeeLeftCtrl'				
+				templateUrl : getLeftTempUrl		
 			},
 			'right@employee':{
 				templateUrl : 'tpls/right.html'

@@ -25,7 +25,7 @@ H1 a {
 	height: 30px;
 	text-decoration: none;
 	moz-outline-style: none;
-	background-image: url(images/menu_bgS.gif);
+	background-image: url(../images/menu_bgS.gif);
 	background-repeat: no-repeat;
 	line-height: 30px;
 	text-align: center;
@@ -74,7 +74,7 @@ H1 a {
 	font-size: 12px;
 	line-height: 26px;
 	color: #333333;
-	background-image: url(images/menu_bg1.gif);
+	background-image: url(../images/menu_bg1.gif);
 	background-repeat: no-repeat;
 	height: 26px;
 	width: 182px;
@@ -91,7 +91,7 @@ H1 a {
 	font-size: 12px;
 	line-height: 26px;
 	color: #333333;
-	background-image: url(images/menu_bg1.gif);
+	background-image: url(../images/menu_bg1.gif);
 	background-repeat: no-repeat;
 	display: block;
 	text-align: center;
@@ -107,7 +107,7 @@ H1 a {
 	font-size: 12px;
 	line-height: 26px;
 	color: #333333;
-	background-image: url(images/menu_bg1.gif);
+	background-image: url(../images/menu_bg1.gif);
 	background-repeat: no-repeat;
 	height: 26px;
 	width: 182px;
@@ -125,7 +125,7 @@ H1 a {
 	line-height: 26px;
 	font-weight: bold;
 	color: #006600;
-	background-image: url(images/menu_bg2.gif);
+	background-image: url(../images/menu_bg2.gif);
 	background-repeat: no-repeat;
 	text-align: center;
 	display: block;

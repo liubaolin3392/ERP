@@ -1,5 +1,8 @@
 package com.chinasoft.model.dao;
 
+import java.util.List;
+import java.util.Map;
+
 import com.chinasoft.model.entity.Employee;
 
 public interface EmployeeMapper {
@@ -16,4 +19,6 @@ public interface EmployeeMapper {
     int updateByPrimaryKeySelective(Employee record);
 
     int updateByPrimaryKey(Employee record);
+    
+    List<Employee> getAllEmployee(Map<String, String> filterMap);
 }

@@ -44,7 +44,7 @@ mianApp.config(function($stateProvider, $urlRouterProvider){
 		}
 	})
 	.state('employee.contract',{
-		url: '/employee/contract',
+		url: '/contract',
 		views:{
         'right@employee':{
 				templateUrl : 'tpls/contract.html'
@@ -52,14 +52,21 @@ mianApp.config(function($stateProvider, $urlRouterProvider){
       }
 	})
 	.state('employee.employeeInfo',{
-		url: '/employee/employeeInfo',
+		url: '/employeeInfo',
+		views:{
+        'right@employee':{
+				templateUrl : 'tpls/employeeInfo.html'
+			}
+      }
+	})
+	.state('employee.employeeInfoE',{
+		url: '/employeeInfoE',
 		views:{
         'right@employee':{
 				templateUrl : 'president/employee.html'
 			}
       }
 	})
-	
 	function getLeftTempUrl($stateParams) {
         return $stateParams.left + '/left.html';
     }

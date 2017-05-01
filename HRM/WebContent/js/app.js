@@ -1,10 +1,14 @@
-var mianApp = angular.module('mianApp',['ui.router']);
+var mianApp = angular.module('mianApp',['ui.router','LoginModule','EmployeeModule']);
 
-
+mianApp.run(['$rootScope', '$state', '$stateParams',
+     function($rootScope, $state, $stateParams) {
+         $rootScope.$state = $state;
+         $rootScope.$stateParams = $stateParams;
+     }
+ ]);
 
 mianApp.config(function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise('/index');
-	
 	$stateProvider
 	.state('index',{
 		url: '/index',
@@ -19,7 +23,7 @@ mianApp.config(function($stateProvider, $urlRouterProvider){
 		}
 	})
 	.state('employee',{
-		url: '/employee',
+		url: '/employee/:left',
 		views: {
 			'':{
 				templateUrl: 'president/index.html'
@@ -28,7 +32,8 @@ mianApp.config(function($stateProvider, $urlRouterProvider){
 				templateUrl : 'tpls/top.html'
 			},
 			'left@employee':{
-				templateUrl : 'president/left.html'
+				templateUrl : getLeftTempUrl,
+				controller: 'EmployeeLeftCtrl'				
 			},
 			'right@employee':{
 				templateUrl : 'tpls/right.html'
@@ -36,7 +41,7 @@ mianApp.config(function($stateProvider, $urlRouterProvider){
 			'bottom@employee':{
 				templateUrl : 'tpls/bottom.html'
 			}
-		}	
+		}
 	})
 	.state('employee.contract',{
 		url: '/employee/contract',
@@ -54,5 +59,9 @@ mianApp.config(function($stateProvider, $urlRouterProvider){
 			}
       }
 	})
+	
+	function getLeftTempUrl($stateParams) {
+        return $stateParams.left + '/left.html';
+    }
 });
 

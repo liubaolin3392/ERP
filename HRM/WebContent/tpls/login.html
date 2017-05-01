@@ -148,7 +148,7 @@
 																	<td height="35" colspan="2" class="top_hui_text">
 																		<input class="editbox4" type="password" size="20"
 																			name="password" ng-model="Employee.password" required>
-																		{{Employee.password}}
+																		{{errorMessage}}
 																	</td>
 																</tr>
 																<tr>
@@ -156,7 +156,7 @@
 																		<span class="login_txt">用户权限：</span>
 																	</td>
 																	<td height="35" colspan="2" class="top_hui_text">
-																		<select size="1" name="userLevel" ng-model="Employee.userLevel">
+																		<select size="1" name="userLevel" ng-model="Employee.userlevel">
 																			<option value="1">
 																				普通用户
 																			</option>

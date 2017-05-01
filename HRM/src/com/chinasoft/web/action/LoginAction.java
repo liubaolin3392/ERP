@@ -1,20 +1,23 @@
 package com.chinasoft.web.action;
 
+import java.lang.reflect.Type;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.chinasoft.model.entity.Employee;
 import com.chinasoft.model.service.LoginServiceImpl;
+import com.google.gson.Gson;
 
 @Controller
-@SessionAttributes("employee")   
+@SessionAttributes("employee")
 @RequestMapping("login")
 public class LoginAction
 {
@@ -23,7 +26,6 @@ public class LoginAction
 	private LoginServiceImpl loginServiceImpl;
 	private Employee employee;
 	private String msg;
-
 	public Employee getEmployee()
 	{
 		return employee;
@@ -45,35 +47,33 @@ public class LoginAction
 	}
 
 	@RequestMapping(value = "checkLoginInfo", method = RequestMethod.GET)
-	@ResponseBody
-	public  String login(@RequestBody Employee employee, ModelMap modelMap)
+	public @ResponseBody String login(@RequestParam String employee, ModelMap modelMap)
 	{
-		Employee loginA = loginServiceImpl.checkLoginData(employee);
-		String result = "";
+		Gson gson = new Gson();
+		Employee tempEmployee = gson.fromJson(employee, Employee.class);
+		
+		Employee loginA = loginServiceImpl.checkLoginData(tempEmployee);
 		if (loginA == null)
 		{
 			return "failure";
-		} else
+		} 
+		else
 		{
 			modelMap.addAttribute("employee", loginA);
-			int level = loginA.getUserlevel();
+			String level = loginA.getUserlevel();
 			switch (level)
 				{
-				case 1:
-					result = "employee";
+				case "1":
+					msg = "employee";
 					break;
-				case 2:
-					result = "branchManager";
+				case "2":
+					msg = "employee";
 					break;
 				default:
-					result = "president";
+					msg = "president";
 					break;
 				}
 		}
-		return result;
+		return msg;
 	}
-	@RequestMapping(value = "login" ,method = RequestMethod.GET)
-	public String tologin() {
-		return "login";
-	}	
 }

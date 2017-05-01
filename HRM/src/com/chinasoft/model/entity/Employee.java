@@ -15,13 +15,28 @@ public class Employee {
 
     private String phone;
 
-    private Integer userlevel;
+    private String userlevel;
 
     private Integer age;
 
     private String sex;
 
-    public Integer getEid() {
+    
+    
+    public Employee()
+	{
+		
+	}
+    
+	public Employee(String userid, String password, String userlevel)
+	{
+		super();
+		this.userid = userid;
+		this.password = password;
+		this.userlevel = userlevel;
+	}
+
+	public Integer getEid() {
         return eid;
     }
 
@@ -77,11 +92,11 @@ public class Employee {
         this.phone = phone == null ? null : phone.trim();
     }
 
-    public Integer getUserlevel() {
+    public String getUserlevel() {
         return userlevel;
     }
 
-    public void setUserlevel(Integer userlevel) {
+    public void setUserlevel(String userlevel) {
         this.userlevel = userlevel;
     }
 
